@@ -1,0 +1,122 @@
+<!doctype html>
+
+<!-- Hello World HTML -->
+<!-- don't forget to validate at https://validator.w3.org -->
+
+<html lang="en">
+
+    <head>
+        <!-- Where CSS and Meta Information Goes -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+        <!-- The text the user sees in browser tab -->
+        <title>Travel Calculator</title>
+
+        <!-- this line is to include the FontAwesome icon set -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+
+        <!-- this line is to include Bootstrap formatting -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- This is how the web page knows about YOUR CSS file! -->
+        <link rel="stylesheet" type="text/css" href="travel-calculator.css"/>
+
+    </head>
+    <body>
+        <!-- This is where all the VISIBLE web page content goes -->
+
+        <!-- outermost responsive container -->
+        <div class="container-fluid" id="travel-calculator">
+
+            <!-- responsive row -->
+            <div id="travel-calculator-row" class="row row-eq-height">
+
+                <!-- responsive column that fills third of desktop screen -->
+                <div id="travel-calculator-car-column" class="col-sm-4">
+                    <div id="results" class="card mb-3">
+                        <img src="images/car.jpg" alt="car" class="card-img">
+                        <div class="card-img-overlay">
+                            <h1 class="card-title text-white h2">Car Options</h1>
+                        </div>
+                    </div>
+                    <p>Distance</p>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="miles-group"><i class="fas fa-route"></i></span>
+                        </div>
+                        <input id="miles" name="miles" type="number" class="form-control" min="50" max="10000" step="10" placeholder="500" value="500" aria-label="Miles" aria-describedby="miles">
+                    </div>
+                    <p>MPG</p>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="mpg-group"><i class="fas fa-gas-pump"></i></span>
+                        </div>
+                        <input id="mpg" name="mpg" type="number" class="form-control" min="1" max="70" step="1" placeholder="25" value="25" aria-label="MPG" aria-describedby="mpg">
+                    </div>
+                    <p>Price Per Gallon</p>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="mpg-group"><i class="fas fa-dollar-sign"></i></span>
+                        </div>
+                        <input id="ppg" name="ppg" type="number" class="form-control" min=".50" max="10" step=".25" placeholder="2.00" value="2.00" aria-label="ppg" aria-describedby="ppg">
+                    </div>
+                </div>
+
+
+
+                <!-- responsive column that fills third of desktop screen -->
+                <div id="travel-calculator-column2" class="col-sm-4">
+                    <div id="results" class="card mb-3">
+                        <img src="images/globe.jpg" alt="globe" class="card-img">
+                        <div class="card-img-overlay">
+                            <h1 class="card-title text-white h2">Misc Options</h1>
+                        </div>
+                    </div>
+                    <p>Number of Travelers</p>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="travelers-group"><i class="fas fa-users"></i></span>
+                        </div>
+                        <input id="travelers" name="travelers" type="number" class="form-control" min="1" max="10" step="1" placeholder="1" value="1" aria-label="travelers" aria-describedby="travelers">
+                    </div>
+                    <p>Hotel</p>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="hotel-group"><i class="fas fa-bed"></i></span>
+                        </div>
+                        <input id="hotel" name="hotel" type="number" class="form-control" min="25.00" max="750.00" step="25" placeholder="199.99" value="199.99" aria-label="Hotel" aria-describedby="hotel">
+                    </div>
+                </div>
+                <!-- responsive column that fills third of desktop screen -->
+                <div id="travel-calculator-plane-column" class="col-sm-4">
+                    <div id="results" class="card mb-3">
+                        <img src="images/plane.jpg" alt="plane" class="card-img">
+                        <div class="card-img-overlay">
+                            <h1 class="card-title text-white h2">Air Options</h1>
+                        </div>
+                    </div>
+<p>Ticket Price</p>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="ticketprice-group"><i class="fas fa-ticket-alt"></i></span>
+                        </div>
+                        <input id="ticketprice" name="ticketprice" type="number" class="form-control" min="50" max="10000" step="10" placeholder="300" value="300" aria-label="Ticket Price" aria-describedby="ticketprice">
+                    </div>
+                    <p>Luggage</p>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="ticketprice-group"><i class="fas fa-suitcase-rolling"></i></span>
+                                            </div>
+                                            <input id="luggage" name="luggage" type="number" class="form-control" min="10" max="2000" step="25" placeholder="50" value="50" aria-label="Luggage" aria-describedby="ticketprice">
+                                        </div>
+                                    </div>
+                </div>
+            </div>
+            <button id="calculate-button" type="button" class="btn btn-danger">Calculate</button>
+        </div>
+        <!-- This is how the web page knows about YOUR JavaScript file! -->
+        <script src="travel-calculator.js"></script>
+    </body>
+
+</html>

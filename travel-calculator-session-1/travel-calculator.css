@@ -1,0 +1,27 @@
+/* Travel Calculator CSS */
+
+/* don't forget to validate at https://jigsaw.w3.org/css-validator/ */
+
+body {
+  background: rgb(153, 179, 255);
+  font-size: 16px;
+  height: 100vh; /* trick to make the "page" the full height */
+}
+
+
+#travel-calculator {
+    margin-top: 1em;
+}
+
+.row {}
+
+p {
+  font-size: 14px;
+  padding-top: .25em;
+  padding-bottom: .25em;
+}
+
+img {
+    width: auto;
+    height: auto;
+}
